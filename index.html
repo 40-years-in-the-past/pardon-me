@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pardon Me</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app">
+    <header class="hud">
+      <div class="hud-left">
+        <div class="hud-campaign" data-i18n="ui.campaign"></div>
+        <div class="hud-day" id="hud-day"></div>
+      </div>
+      <div class="stat" id="stat-money">
+        <span class="stat-label" data-i18n="ui.money"></span>
+        <span class="stat-value" id="stat-money-value"></span>
+      </div>
+      <div class="stat" id="stat-friendship">
+        <span class="stat-label" data-i18n="ui.friendship"></span>
+        <span class="stat-value" id="stat-friendship-value"></span>
+      </div>
+    </header>
+
+    <main class="stage">
+      <section class="event-area">
+        <div class="event-timer">
+          <div class="event-timer-fill" id="event-timer-fill"></div>
+        </div>
+
+        <div class="event-card" id="event-card" aria-live="polite"></div>
+
+        <div class="npc-panel" id="npc-panel" hidden>
+          <div class="speech-bubble"><p id="npc-text"></p></div>
+          <img class="npc-image" id="npc-image" alt="" hidden>
+          <button class="btn btn-close" id="npc-close" type="button" data-i18n="ui.closeNpc"></button>
+        </div>
+
+        <div class="end-panel" id="end-panel" hidden>
+          <h2 class="end-title" id="end-title"></h2>
+          <p class="end-text" id="end-text"></p>
+          <p class="end-stats" id="end-stats"></p>
+          <button class="btn btn-primary" id="restart-btn" type="button" data-i18n="ui.restart"></button>
+        </div>
+
+        <div class="intro-panel" id="intro-panel" hidden>
+          <p class="intro-text" data-i18n="ui.disclaimer"></p>
+          <button class="btn btn-primary" id="intro-start" type="button" data-i18n="ui.disclaimerStart"></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="controls">
+      <nav class="actions" aria-label="Actions">
+        <button class="action-btn" type="button" data-action="minister">
+          <img class="thumb" alt="">
+          <span class="action-text">
+            <span class="action-label"></span>
+            <span class="action-cost"></span>
+            <span class="action-cooldown"></span>
+          </span>
+        </button>
+        <button class="action-btn" type="button" data-action="influencer">
+          <img class="thumb" alt="">
+          <span class="action-text">
+            <span class="action-label"></span>
+            <span class="action-cost"></span>
+            <span class="action-cooldown"></span>
+          </span>
+        </button>
+        <button class="action-btn" type="button" data-action="pardon">
+          <img class="thumb" alt="">
+          <span class="action-text">
+            <span class="action-label"></span>
+            <span class="action-cost"></span>
+            <span class="action-cooldown"></span>
+          </span>
+        </button>
+      </nav>
+
+      <div class="mood-zone" id="mood-zone">
+        <div class="avatar">
+          <img id="avatar-img" alt="">
+        </div>
+        <div class="pr-column">
+          <div class="pr-value" id="pr-value"></div>
+          <div class="pr-bar" id="pr-bar">
+            <div class="pr-fill" id="pr-fill"></div>
+          </div>
+          <div class="pr-label" data-i18n="ui.pr"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="config.js"></script>
+  <script src="locales/bg.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
